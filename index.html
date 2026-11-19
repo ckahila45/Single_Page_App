@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="description"
+        content="A Pokémon search app that uses PokéAPI data to display Pokémon details, types, abilities, and base stats."
+    >
+    <title>Pokémon Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-content">
+            <p class="eyebrow">Pokédex Terminal</p>
+            <h1>Pokémon Search</h1>
+            <p>
+                Search by Pokémon name or Pokédex number to view its profile,
+                types, abilities, and base stats.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <section class="search-panel" aria-labelledby="search-heading">
+            <h2 id="search-heading">Find a Pokémon</h2>
+
+            <form id="search-form">
+                <label for="search-input">Name or Pokédex number</label>
+
+                <div class="search-controls">
+                    <input
+                        id="search-input"
+                        name="pokemon"
+                        type="search"
+                        placeholder="Try pikachu or 25"
+                        autocomplete="off"
+                        required
+                    >
+                    <button type="submit">Search</button>
+                    <button id="random-button" class="secondary-button" type="button">
+                        Random
+                    </button>
+                </div>
+            </form>
+
+            <p class="search-tip">
+                Examples: charizard, eevee, 94, 448
+            </p>
+        </section>
+
+        <section
+            id="result"
+            class="result-panel"
+            aria-live="polite"
+            aria-labelledby="result-heading"
+        >
+            <div class="empty-state">
+                <p class="screen-label">READY</p>
+                <h2 id="result-heading">Waiting for a search</h2>
+                <p>Enter a Pokémon above to load PokéAPI data.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            Data provided by
+            <a href="https://pokeapi.co/" target="_blank" rel="noopener noreferrer">
+                PokéAPI
+            </a>.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
