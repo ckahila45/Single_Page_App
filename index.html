@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta
         name="description"
         content="A Pokémon search app that uses PokéAPI data to display Pokémon details, types, abilities, and base stats."
     >
+
     <title>Pokémon Search</title>
+
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -15,7 +19,9 @@
     <header class="site-header">
         <div class="header-content">
             <p class="eyebrow">Pokédex Terminal</p>
+
             <h1>Pokémon Search</h1>
+
             <p>
                 Search by Pokémon name or Pokédex number to view its profile,
                 types, abilities, and base stats.
@@ -39,16 +45,47 @@
                         autocomplete="off"
                         required
                     >
-                    <button type="submit">Search</button>
-                    <button id="random-button" class="secondary-button" type="button">
+
+                    <button type="submit">
+                        Search
+                    </button>
+
+                    <button
+                        id="random-button"
+                        class="secondary-button"
+                        type="button"
+                    >
                         Random
+                    </button>
+
+                    <button
+                        id="clear-button"
+                        class="secondary-button"
+                        type="button"
+                    >
+                        Clear
                     </button>
                 </div>
             </form>
 
             <p class="search-tip">
-                Examples: charizard, eevee, 94, 448
+                Search by Pokémon name or Pokédex number. Spelling matters,
+                but capitalization does not. Examples: Pikachu, charizard,
+                94, 448.
             </p>
+
+            <section
+                class="recent-searches"
+                aria-labelledby="recent-heading"
+            >
+                <h3 id="recent-heading">Recent Searches</h3>
+
+                <ul id="recent-list" class="recent-list">
+                    <li class="recent-empty">
+                        No recent searches yet.
+                    </li>
+                </ul>
+            </section>
         </section>
 
         <section
@@ -59,8 +96,14 @@
         >
             <div class="empty-state">
                 <p class="screen-label">READY</p>
-                <h2 id="result-heading">Waiting for a search</h2>
-                <p>Enter a Pokémon above to load PokéAPI data.</p>
+
+                <h2 id="result-heading">
+                    Waiting for a search
+                </h2>
+
+                <p>
+                    Enter a Pokémon above to load PokéAPI data.
+                </p>
             </div>
         </section>
     </main>
@@ -68,7 +111,11 @@
     <footer>
         <p>
             Data provided by
-            <a href="https://pokeapi.co/" target="_blank" rel="noopener noreferrer">
+            <a
+                href="https://pokeapi.co/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
                 PokéAPI
             </a>.
         </p>
@@ -76,4 +123,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
